@@ -5,7 +5,6 @@
   "repository": "lagden/dotenv",
   "main": "index.js",
   "files": [
-    "lib",
     "LICENSE",
     "README.md"
   ],
