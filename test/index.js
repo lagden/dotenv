@@ -42,4 +42,5 @@ test('crlf', t => {
 	t.true(r)
 	t.is(process.env.DEBUG, 'tadashi-dotenv')
 	t.is(process.env.DOTENV, 'awesome')
+	t.is(process.env.WIN, 'crlf')
 })
