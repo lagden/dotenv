@@ -73,7 +73,7 @@ function streamEnv(...args) {
 function syncEnv(...args) {
 	const dotenvFile = _prepare(...args)
 	const input = readFileSync(dotenvFile, 'utf-8')
-	const lines = input.split(/\n|\n\r/g)
+	const lines = input.split(/\n|\r\n/g)
 	for (const line of lines) {
 		_parse(line)
 	}

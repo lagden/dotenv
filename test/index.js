@@ -1,5 +1,6 @@
 'use strict'
 
+import {join} from 'path'
 import test from 'ava'
 import {streamEnv, syncEnv} from '../.'
 
@@ -34,4 +35,11 @@ test('sync error', t => {
 		syncEnv('not_found', '/tmp')
 	}, Error)
 	t.is(error.message, `ENOENT: no such file or directory, open '/tmp/not_found'`)
+})
+
+test('crlf', t => {
+	const r = syncEnv('env.crlf', join(__dirname, 'fixtures'))
+	t.true(r)
+	t.is(process.env.DEBUG, 'tadashi-dotenv')
+	t.is(process.env.DOTENV, 'awesome')
 })
