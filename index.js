@@ -28,8 +28,8 @@ function _prepare(...args) {
  *
  */
 function _parse(line) {
-	const [k, v] = line.split('=')
-	process.env[k] = v
+	const [k, ...v] = line.split('=')
+	process.env[k] = v.join('=')
 }
 
 /**
