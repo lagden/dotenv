@@ -31,26 +31,12 @@ $ npm i -S @tadashi/dotenv
 
 ## Usage
 
-Sync mode:
 
 ```js
-const {syncEnv} = require('@tadashi/dotenv')
+require('@tadashi/dotenv')()
 
-syncEnv()
 console.log(process.env.DOTENV)
 // => awesome
-```
-
-Stream mode:
-
-```js
-const {streamEnv} = require('@tadashi/dotenv')
-
-streamEnv()
-  .on('end', () => {
-    console.log(process.env.DOTENV)
-    // => awesome
-  })
 ```
 
 
