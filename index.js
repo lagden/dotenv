@@ -5,7 +5,6 @@
 
 'use strict'
 
-const process = require('process')
 const {resolve} = require('path')
 const {readFileSync, statSync} = require('fs')
 
@@ -61,11 +60,13 @@ function dotEnv(...args) {
 	if (_verify(file) === false) {
 		throw new Error(`File not found: ${file}`)
 	}
+
 	const data = readFileSync(file, 'utf8')
 	const lines = data.split(/\n|\r\n/g)
 	for (const line of lines) {
 		_parse(line)
 	}
+
 	return true
 }
 

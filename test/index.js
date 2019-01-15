@@ -1,6 +1,5 @@
 'use strict'
 
-import process from 'process'
 import {join} from 'path'
 import test from 'ava'
 import dotEnv from '..'
