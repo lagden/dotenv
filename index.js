@@ -18,7 +18,7 @@ function _verify(file) {
 	try	{
 		const stats = statSync(file)
 		return stats.isFile()
-	} catch (error) {
+	} catch {
 		return false
 	}
 }
