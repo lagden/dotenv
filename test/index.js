@@ -1,8 +1,8 @@
 'use strict'
 
-import {join} from 'path'
-import test from 'ava'
-import dotEnv from '..'
+const {join} = require('path')
+const test = require('ava')
+const dotEnv = require('..')
 
 test.beforeEach(() => {
 	process.env = {}
@@ -19,7 +19,8 @@ test('.env', t => {
 test('.env error', t => {
 	const error = t.throws(() => {
 		dotEnv('not_found', '/tmp')
-	}, Error)
+	}, {instanceOf: Error})
+
 	t.is(error.message, 'File not found: /tmp/not_found')
 })
 
