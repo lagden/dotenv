@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "ava": "3.5.0",
-    "xo": "0.28.0"
+    "xo": "0.28.1"
   },
   "ava": {
     "files": [
