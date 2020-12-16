@@ -26,8 +26,8 @@
     "node": ">=10"
   },
   "devDependencies": {
-    "ava": "3.10.1",
-    "xo": "0.32.1"
+    "ava": "3.14.0",
+    "xo": "0.36.1"
   },
   "ava": {
     "files": [
@@ -47,7 +47,8 @@
           "properties": "never"
         }
       ],
-      "capitalized-comments": 0
+      "capitalized-comments": 0,
+      "unicorn/import-style": 0
     }
   }
 }
